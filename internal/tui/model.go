@@ -26,10 +26,6 @@ type responseMsg struct {
 	err      error
 }
 
-type loadHistoryMsg struct {
-	entry panels.HistoryEntry
-}
-
 // Model root bubbletea model
 type Model struct {
 	width  int

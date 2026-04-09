@@ -19,7 +19,7 @@ var (
 
 func PrintResponse(resp *Response) {
 	// Status satırı
-	statusStr := fmt.Sprintf("%s", resp.Status)
+	statusStr := resp.Status
 	var styledStatus string
 	switch {
 	case resp.StatusCode >= 500:
