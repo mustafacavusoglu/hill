@@ -33,11 +33,11 @@ Running `hill` with no arguments opens a full-screen interactive interface.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│  hill  │ [F1] Request │ [F2] Response │ [F3] History │ [?] Help                │
+│  hill  │ [F1] Request │ [F2] Response │ [F3] History │ [?] Help                 │
 ├──────────────────────────────────────┬──────────────────────────────────────────┤
-│  REQUEST                     [active]│  RESPONSE                               │
+│  REQUEST                     [active]│  RESPONSE                                │
 │                                      │                                          │
-│  GET   https://api.github.com/users  │  200 OK  (312ms)  HTTP/2.0  1.4 KB      │
+│  GET   https://api.github.com/users  │  200 OK  (312ms)  HTTP/2.0  1.4 KB       │
 │                                      │                                          │
 │  Body (JSON):                        │  Content-Type: application/json          │
 │  ┌────────────────────────────────┐  │  X-RateLimit-Remaining: 59               │
@@ -51,12 +51,12 @@ Running `hill` with no arguments opens a full-screen interactive interface.
 │  [ctrl+r] Send  [ctrl+m] Method      │  ]                                       │
 │  [tab] Switch field                  │  [j/k] Scroll  [c] Copy                  │
 ├──────────────────────────────────────┴──────────────────────────────────────────┤
-│  HISTORY                                                                         │
-│  ▶ GET    https://api.github.com/users            200  312ms  20:14:32           │
-│    POST   https://api.example.com/users           201   89ms  20:13:11           │
-│    GET    https://httpbin.org/get                 200  145ms  20:12:05           │
-│    DELETE https://api.example.com/users/42        404   44ms  20:11:58           │
-└──────────────────────────────────────────────────────────────────────────────────┘
+│  HISTORY                                                                        │
+│  ▶ GET    https://api.github.com/users            200  312ms  20:14:32          │
+│    POST   https://api.example.com/users           201   89ms  20:13:11          │
+│    GET    https://httpbin.org/get                 200  145ms  20:12:05          │
+│    DELETE https://api.example.com/users/42        404   44ms  20:11:58          │
+└─────────────────────────────────────────────────────────────────────────────────┘
   [ctrl+r] Send  [ctrl+m] Method  [F1-F3] Panels  [q] Quit
 ```
 

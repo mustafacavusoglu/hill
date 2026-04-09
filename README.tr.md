@@ -33,11 +33,11 @@ Go 1.21+ gereklidir.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│  hill  │ [F1] Request │ [F2] Response │ [F3] History │ [?] Yardım              │
+│  hill  │ [F1] Request │ [F2] Response │ [F3] History │ [?] Yardım               │
 ├──────────────────────────────────────┬──────────────────────────────────────────┤
-│  REQUEST                      [aktif]│  RESPONSE                               │
+│  REQUEST                      [aktif]│  RESPONSE                                │
 │                                      │                                          │
-│  GET   https://api.github.com/users  │  200 OK  (312ms)  HTTP/2.0  1.4 KB      │
+│  GET   https://api.github.com/users  │  200 OK  (312ms)  HTTP/2.0  1.4 KB       │
 │                                      │                                          │
 │  Body (JSON):                        │  Content-Type: application/json          │
 │  ┌────────────────────────────────┐  │  X-RateLimit-Remaining: 59               │
@@ -51,12 +51,12 @@ Go 1.21+ gereklidir.
 │  [ctrl+r] Gönder [ctrl+m] Method     │  ]                                       │
 │  [tab] Alan geçiş                    │  [j/k] Scroll  [c] Kopyala               │
 ├──────────────────────────────────────┴──────────────────────────────────────────┤
-│  HISTORY                                                                         │
-│  ▶ GET    https://api.github.com/users            200  312ms  20:14:32           │
-│    POST   https://api.example.com/users           201   89ms  20:13:11           │
-│    GET    https://httpbin.org/get                 200  145ms  20:12:05           │
-│    DELETE https://api.example.com/users/42        404   44ms  20:11:58           │
-└──────────────────────────────────────────────────────────────────────────────────┘
+│  HISTORY                                                                        │
+│  ▶ GET    https://api.github.com/users            200  312ms  20:14:32          │
+│    POST   https://api.example.com/users           201   89ms  20:13:11          │
+│    GET    https://httpbin.org/get                 200  145ms  20:12:05          │
+│    DELETE https://api.example.com/users/42        404   44ms  20:11:58          │
+└─────────────────────────────────────────────────────────────────────────────────┘
   [ctrl+r] Gönder  [ctrl+m] Method  [F1-F3] Panel  [q] Çıkış
 ```
 
