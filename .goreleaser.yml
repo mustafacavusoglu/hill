@@ -1,0 +1,77 @@
+version: 2
+
+project_name: hill
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ignore:
+      - goos: windows
+        goarch: arm64
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+    mod_timestamp: "{{ .CommitTimestamp }}"
+
+archives:
+  - formats:
+      - tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+
+checksum:
+  name_template: "checksums.txt"
+  algorithm: sha256
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^chore:"
+      - Merge pull request
+      - Merge branch
+
+release:
+  github:
+    owner: mustafacavusoglu
+    name: hill
+  name_template: "v{{ .Version }}"
+  header: |
+    ## hill {{ .Version }}
+
+    Terminal HTTP client, load tester ve network checker.
+
+    ### Kurulum
+
+    **macOS (Apple Silicon):**
+    ```bash
+    curl -L https://github.com/mustafacavusoglu/hill/releases/download/{{ .Tag }}/hill_darwin_arm64.tar.gz | tar xz
+    sudo mv hill /usr/local/bin/
+    ```
+
+    **macOS (Intel):**
+    ```bash
+    curl -L https://github.com/mustafacavusoglu/hill/releases/download/{{ .Tag }}/hill_darwin_amd64.tar.gz | tar xz
+    sudo mv hill /usr/local/bin/
+    ```
+
+    **Linux:**
+    ```bash
+    curl -L https://github.com/mustafacavusoglu/hill/releases/download/{{ .Tag }}/hill_linux_amd64.tar.gz | tar xz
+    sudo mv hill /usr/local/bin/
+    ```
