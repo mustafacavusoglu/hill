@@ -17,8 +17,7 @@ type KeyMap struct {
 
 	// Request panel
 	Send         key.Binding
-	ChangeMethod key.Binding
-	AddHeader    key.Binding
+	AddHeader key.Binding
 	NextField    key.Binding
 	PrevField    key.Binding
 
@@ -65,10 +64,6 @@ var DefaultKeyMap = KeyMap{
 	Send: key.NewBinding(
 		key.WithKeys("ctrl+r"),
 		key.WithHelp("ctrl+r", "gönder"),
-	),
-	ChangeMethod: key.NewBinding(
-		key.WithKeys("ctrl+m"),
-		key.WithHelp("ctrl+m", "method değiştir"),
 	),
 	AddHeader: key.NewBinding(
 		key.WithKeys("ctrl+h"),
